@@ -29,6 +29,7 @@ fetch('inventario.json')
         <td>${p.categoria}</td>
         <td>$${p.precio}</td>
         <td>${p.stock}</td>
+        <td>${p.stock < STOCK_BAJO ? 'Stock bajo' : 'Disponible'}</td>
       `;
       tbody.appendChild(tr);
     });
